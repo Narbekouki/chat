@@ -1,8 +1,8 @@
 class DBConnectiongError extends Error
 {
-    constructor()
+    constructor(err)
     {
-        super('db connecting: Error')
+        super(err)
     }
 }
 module.exports = DBConnectiongError;

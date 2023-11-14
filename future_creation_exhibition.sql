@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2023-11-14 01:59:25
+-- 生成日時: 2023-11-14 08:58:13
 -- サーバのバージョン： 10.4.24-MariaDB
 -- PHP のバージョン: 8.1.6
 
@@ -50,8 +50,18 @@ CREATE TABLE `message` (
   `id` int(11) NOT NULL,
   `room_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL COMMENT '送信者ID',
-  `text` text NOT NULL
+  `text` text NOT NULL,
+  `create_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- テーブルのデータのダンプ `message`
+--
+
+INSERT INTO `message` (`id`, `room_id`, `user_id`, `text`, `create_at`) VALUES
+(1, 1, 96, 'こんにちは', '2023-11-14 15:59:35'),
+(2, 2, 96, 'ルーム２', '2023-11-14 16:00:22'),
+(3, 1, 97, 'さようなら', '2023-11-14 16:00:35');
 
 -- --------------------------------------------------------
 
@@ -101,6 +111,12 @@ INSERT INTO `user` (`id`, `login_id`, `password_hash`, `name`, `icon_path`, `cre
 --
 
 --
+-- テーブルのインデックス `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- テーブルのインデックス `room`
 --
 ALTER TABLE `room`
@@ -116,6 +132,12 @@ ALTER TABLE `user`
 --
 -- ダンプしたテーブルの AUTO_INCREMENT
 --
+
+--
+-- テーブルの AUTO_INCREMENT `message`
+--
+ALTER TABLE `message`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- テーブルの AUTO_INCREMENT `room`

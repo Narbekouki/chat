@@ -6,15 +6,18 @@
     <title>Document</title>
 </head>
 <body>
+    
     <h1><%= service_name %></h1>
-    <form action="/auth" method="post">
+    <form action="/user_registration" method="post">
+        <label for="name">名前</label>
+        <input id="name" name="name" type="text" required>
+        <br>
         <label for="id">ログインID</label>
         <input id="id" name="login_id" type="text" required>
         <br>
         <label for="password">パスワード</label>
         <input id="password" name="password" type="password" required>
-        <button>ログイン</button>
+        <button>登録</button>
     </form>
-    <a href="/user_registration">ユーザー登録</a>
 </body>
 </html>

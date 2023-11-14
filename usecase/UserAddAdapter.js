@@ -36,7 +36,7 @@ class UserAddAdapter
                 return results.insertId;
             });
         } catch (error) {
-            // console.log(error);
+            console.log(error);
             return false;
         }
     }

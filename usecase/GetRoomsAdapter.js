@@ -14,13 +14,12 @@ class GetRoomsAdapter
      */
     async exec(user_id)
     {
-
         try {
             assertTypeEqual('number', user_id);
             
             const sql = 'SELECT r.* ' +
                         'FROM room as r ' +
-                        'INNER JOIN joined_room as j ' +
+                        'INNER JOIN join_room as j ' +
                         'ON r.id = j.room_id ' + 
                         'WHERE j.user_id = ?';
             const stmt = [user_id];

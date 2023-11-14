@@ -11,7 +11,6 @@ class IndexController extends Controller
     show()
     {
         const user_id = this.req.session.user_id;
-        // const user_id = 96
 
         // ログインしてないとリダイレクト
         if (user_id === undefined) {

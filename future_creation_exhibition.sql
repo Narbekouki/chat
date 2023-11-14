@@ -24,19 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- テーブルの構造 `joined_room`
+-- テーブルの構造 `join_room`
 --
 
-CREATE TABLE `joined_room` (
+CREATE TABLE `join_room` (
   `room_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- テーブルのデータのダンプ `joined_room`
+-- テーブルのデータのダンプ `join_room`
 --
 
-INSERT INTO `joined_room` (`room_id`, `user_id`) VALUES
+INSERT INTO `join_room` (`room_id`, `user_id`) VALUES
 (1, 96),
 (1, 97);
 

@@ -7,6 +7,11 @@ class GetRoomsAdapter
         this.connect = connect;
     }
 
+    /**
+     * @typedef {{id:number, name:string, create_at: string}} Room 
+     * @param {number} user_id 取得したいユーザーID 
+     * @returns {Room[]}
+     */
     async exec(user_id)
     {
 

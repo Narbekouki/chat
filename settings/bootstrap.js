@@ -1,4 +1,4 @@
-module.exports = function(app, session) {
+module.exports = function(express, app, session) {
     
     // ビューエンジンをEJSに設定
     app.set('view engine', 'ejs');
@@ -6,8 +6,11 @@ module.exports = function(app, session) {
 
     // セッション
     app.use(session({
-        secret: 'secret_key',
+        secret: 'secret', // よくわかってない
         resave: false,
         saveUninitialized: false
     }));
+
+    // フォームから受け取れる設定
+    app.use(express.urlencoded({extended:true}));
 };

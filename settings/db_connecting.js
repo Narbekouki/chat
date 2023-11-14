@@ -1,4 +1,4 @@
-const DBConnectiongError = require(__dirname + '/../error/DBConnectiongError');
+const DBConnectingError = require(__dirname + '/../error/DBConnectingError');
 
 module.exports = function(mysql) {
     const db_config = require(__dirname + '/db_config');
@@ -9,12 +9,5 @@ module.exports = function(mysql) {
         database: db_config.db_name
     });
 
-    connection.connect((err) => {
-        if (err) {
-            console.log('error connecting: ' + err.stack);
-            throw new DBConnectiongError();
-        }
-        console.log('db connecting: success');
-    });
     return connection;
 };

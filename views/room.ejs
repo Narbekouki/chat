@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/destyle.css">
+    <link rel="stylesheet" href="/css/chat.css">
     <title>Document</title>
 </head>
 <body>
     <main>
-        <ul id="messages">
-            <% for (const message of messages) { %>
-                <% if (user_id === message.user.id) { %>
-                    <li class="me">
-                        <%= message.text %>
-                    </li>
-                <% } else { %>
-                    <li class="not_me">
-                        <img src="<%= message.user.icon_path %>"><%= message.text %>
-                    </li>
+        <section>
+            <div id="messages">
+                <% for (const message of messages) { %>
+                    <% if (user_id === message.user.id) { %>
+                        <p class="me">
+                            <%= message.text %>
+                        </p>
+                    <% } else { %>
+                        <p class="not_me">
+                            <img src="<%= message.user.icon_path %>"><%= message.text %>
+                        </p>
+                    <% } %>
                 <% } %>
-            <% } %>
-        </ul>
-
-        <input type="text" name="message" placeholder="メッセージを送信">
-        <button id="send">送信</button>
+            </div>
+            <div>
+                <input type="text" name="message" placeholder="メッセージを送信">
+                <button id="send">送信</button>
+            </div>
+        </section>
     </main>
     <script>
         

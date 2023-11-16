@@ -10,12 +10,17 @@ section {
 }
 
 .not_me {
-    width: 50%;
+    max-width: 65%;
+    /* display: inline-block; */
     background-color: white;
-    padding: 1rem 1rem 1rem 1.5rem;
+    margin-top: 2vh;
+    padding: 1rem 1rem 1rem 1rem;
     border-radius: 30px;
 }
-.not_me::before{
+#message {
+    margin-top: 0.5rem;
+}
+#name::before{
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -27,16 +32,26 @@ section {
     background: url(/image/chaticon.PNG) no-repeat;
     background-size: contain;
     margin-right: 10px;
+    margin-bottom: 0.5rem;
 }
 
 .me {
-    width: 50%;
-    margin: 2vh 0 0 auto;
-    background-color: rgb(65, 172, 65);
+    /* /* width: 50%; */
+    max-width: 60%;
+    margin: 2vh 0 0 0;
+    display: inline-block;
+    background-color: rgb(111, 230, 111);
     padding: 1rem 1rem 1rem 1.5rem;
     border-radius: 30px;
 }
+.right{
+    display: flex;
+    justify-content: end;
+}
 
+#name {
+    border-bottom: solid 1px rgb(155, 154, 154);
+}
 
 div:nth-child(2) {
     background-color: rgb(216, 209, 188);
@@ -52,6 +67,7 @@ div:nth-child(2) {
 
 div:nth-child(2) input {
     border: solid 1px black;
+    margin-top: 2vh;
     width: 60%;
     height: 6vh;
 }
@@ -60,6 +76,7 @@ div:nth-child(2) button {
     text-align: center;
     border: solid 1px black;
     color: black;
+    margin-top: 2vh;
     width: 20%;
     height: 6vh;
 }

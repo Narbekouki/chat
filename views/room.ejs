@@ -13,13 +13,19 @@
             <div id="messages">
                 <% for (const message of messages) { %>
                     <% if (user_id === message.user.id) { %>
-                        <p class="me">
-                            <%= message.text %>
-                        </p>
+                        <div class="right">
+                            <p class="me">
+                                <%= message.text %>
+                            </p>
+                        </div>
+                        
                     <% } else { %>
-                        <p class="not_me">
-                            <img src="<%= message.user.icon_path %>"><%= message.text %>
-                        </p>
+                        <div class="not_me">
+                            <p id="name">山田</p>
+                            <p id="message">
+                                <img src="<%= message.user.icon_path %>"><%= message.text %>
+                            </p>
+                        </div>
                     <% } %>
                 <% } %>
             </div>

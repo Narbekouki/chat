@@ -7,6 +7,8 @@ body {
 
 section {
     width: 100%;
+    height: 100%;
+    overflow: scroll;
 }
 
 .not_me {
@@ -16,6 +18,9 @@ section {
     margin-top: 2vh;
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 30px;
+}
+#messages {
+    height: 90vh;
 }
 .message {
     margin-top: 0.5rem;
@@ -55,13 +60,13 @@ section {
 
 div:nth-child(2) {
     background-color: rgb(216, 209, 188);
+    position: fixed;
     width: 100%;
     height: 10vh;
     margin: 0 auto;
     text-align: center;
     color: #fff;
     /* text-align: center; */
-    position: absolute;/*←絶対位置*/
     bottom: 0; /*下に固定*/
 }
 

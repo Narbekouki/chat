@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+
 /*--------------------------携帯画面----------------------*/
 body {
     height: 100vh;
-    background-image: url(/image/chatbg1.jpg);
-    
+    /* background-image: url(/image/chatbg1.jpg); */
+    font-family: 'Noto Sans JP', sans-serif;  
 }
 
 section {
@@ -14,7 +16,9 @@ section {
 .not_me {
     max-width: 65%;
     /* display: inline-block; */
+    border: solid 1px black;
     background-color: white;
+    margin-left: 1vw;
     margin-top: 2vh;
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 30px;
@@ -65,7 +69,7 @@ div:nth-child(2) {
     height: 10vh;
     margin: 0 auto;
     text-align: center;
-    color: #fff;
+    /* color: #fff; */
     /* text-align: center; */
     bottom: 0; /*下に固定*/
 }
